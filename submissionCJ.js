@@ -60,8 +60,10 @@ const largestPair = function(array) {
 
 const removeParenth = function(str) {
   // your code here - don't forget to return a string!
+  return 'String'
 };
 
 const scoreScrabble = function(str) {
   // your code here - don't forget to return a number!
+  return 1
 };
