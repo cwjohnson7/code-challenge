@@ -39,7 +39,6 @@ const isPalindrome = function(str) {
   // your code here - don't forget to return a boolean!
     let stringArray = [];
     let originalArray = [];
-
     for (let i = 0; i < str.length; i++) {
         const forwardArray = str[i];
         stringArray.push(forwardArray);
@@ -47,8 +46,7 @@ const isPalindrome = function(str) {
     reverseOfArray = stringArray.reverse();
     for (let i = 0; i < str.length; i++) {
         const unmutatedArray = str[i];
-        originalArray.push(unmutatedArray);
-        
+        originalArray.push(unmutatedArray);     
     }
     for (let i = 0; i < originalArray.length; i++) {
         const originalArrayComp = originalArray[i];
@@ -57,7 +55,6 @@ const isPalindrome = function(str) {
             return false;
         }    
     }
-
     return true;
 };
 
