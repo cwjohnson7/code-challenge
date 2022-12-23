@@ -37,12 +37,27 @@ const findFrequency = function(array) {
 
 const isPalindrome = function(str) {
   // your code here - don't forget to return a boolean!
-    const lenStr = str.length;
-    for(let i = 0; i < lenStr / 2; i++){
-        if (str[i] !== str[lenStr - 1 - i]) {
-            return false;
-        }
+    let stringArray = [];
+    let originalArray = [];
+
+    for (let i = 0; i < str.length; i++) {
+        const forwardArray = str[i];
+        stringArray.push(forwardArray);
     }
+    reverseOfArray = stringArray.reverse();
+    for (let i = 0; i < str.length; i++) {
+        const unmutatedArray = str[i];
+        originalArray.push(unmutatedArray);
+        
+    }
+    for (let i = 0; i < originalArray.length; i++) {
+        const originalArrayComp = originalArray[i];
+        const reverseOfArrayComp = reverseOfArray[i];
+        if ( originalArrayComp[i] !== reverseOfArrayComp[i]) {
+            return false;
+        }    
+    }
+
     return true;
 };
 
