@@ -60,7 +60,20 @@ const largestPair = function(array) {
 
 const removeParenth = function(str) {
   // your code here - don't forget to return a string!
-  return 'String'
+  let stringArray = [];
+  let stringArrayBackwards = [];
+  for (let i = 0; i < str.indexOf('('); i++) {
+    const leftSideOfString = str[i];
+    stringArray.push(leftSideOfString);
+  }
+  for (let i = str.length - 1; i > str.indexOf(')'); i--) {
+    const rightSideOfString = str[i];
+    stringArrayBackwards.push(rightSideOfString);
+  }
+  let rightSideReversedArr = stringArrayBackwards.reverse();
+  let concatArrays = stringArray.concat(rightSideReversedArr);
+  let removedParenthString = concatArrays.join('');
+  return removedParenthString
 };
 
 const scoreScrabble = function(str) {
